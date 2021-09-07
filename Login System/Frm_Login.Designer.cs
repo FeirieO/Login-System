@@ -1,7 +1,7 @@
 ﻿
 namespace Login_System
 {
-    partial class FrmCreateAcc
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -159,7 +159,7 @@ namespace Login_System
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCreateAcc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_CreateAcc";
+            this.Text = "Frm_Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

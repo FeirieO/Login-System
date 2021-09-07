@@ -59,7 +59,7 @@ namespace Login_System
             }
             else
             {
-                MessageBox.Show("Password Does Not Match", "Please Re-Enter Password",, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Password Does Not Match", "Please Re-Enter Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPassword.Text = "";
                 txtConPassword.Text = "";
                 txtPassword.Focus();
@@ -79,6 +79,12 @@ namespace Login_System
                 txtPassword.PasswordChar = '.';
                 txtConPassword.PasswordChar = '.';
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            new Frm_Login().Show();
+            this.Hide();
         }
     }
 }

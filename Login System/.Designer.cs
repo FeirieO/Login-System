@@ -51,6 +51,7 @@ namespace Login_System
             this.label6.Size = new System.Drawing.Size(97, 17);
             this.label6.TabIndex = 19;
             this.label6.Text = "Back to LOGIN";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
