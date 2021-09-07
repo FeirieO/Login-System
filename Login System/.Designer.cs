@@ -86,6 +86,7 @@ namespace Login_System
             this.checkbxShowPassword.TabIndex = 17;
             this.checkbxShowPassword.Text = "Show Password";
             this.checkbxShowPassword.UseVisualStyleBackColor = true;
+            this.checkbxShowPassword.CheckedChanged += new System.EventHandler(this.checkbxShowPassword_CheckedChanged);
             // 
             // txtConPassword
             // 
@@ -95,6 +96,7 @@ namespace Login_System
             this.txtConPassword.Location = new System.Drawing.Point(94, 435);
             this.txtConPassword.Multiline = true;
             this.txtConPassword.Name = "txtConPassword";
+            this.txtConPassword.PasswordChar = '.';
             this.txtConPassword.Size = new System.Drawing.Size(267, 49);
             this.txtConPassword.TabIndex = 16;
             // 
@@ -115,6 +117,7 @@ namespace Login_System
             this.txtPassword.Location = new System.Drawing.Point(94, 331);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '.';
             this.txtPassword.Size = new System.Drawing.Size(267, 46);
             this.txtPassword.TabIndex = 14;
             // 
