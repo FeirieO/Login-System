@@ -46,5 +46,11 @@ namespace Login_System
         {
 
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+        }
     }
 }
