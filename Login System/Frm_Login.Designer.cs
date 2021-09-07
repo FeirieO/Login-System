@@ -1,7 +1,7 @@
 ﻿
 namespace Login_System
 {
-    partial class FrmLogin
+    partial class FrmCreateAcc
     {
         /// <summary>
         /// Required designer variable.

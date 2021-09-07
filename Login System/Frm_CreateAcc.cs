@@ -86,5 +86,15 @@ namespace Login_System
             new Frm_Login().Show();
             this.Hide();
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

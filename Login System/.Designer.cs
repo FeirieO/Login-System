@@ -100,6 +100,7 @@ namespace Login_System
             this.txtConPassword.PasswordChar = '.';
             this.txtConPassword.Size = new System.Drawing.Size(267, 49);
             this.txtConPassword.TabIndex = 16;
+            this.txtConPassword.TextChanged += new System.EventHandler(this.txtConPassword_TextChanged);
             // 
             // label4
             // 
@@ -121,6 +122,7 @@ namespace Login_System
             this.txtPassword.PasswordChar = '.';
             this.txtPassword.Size = new System.Drawing.Size(267, 46);
             this.txtPassword.TabIndex = 14;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label3
             // 
@@ -189,7 +191,7 @@ namespace Login_System
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Login";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
