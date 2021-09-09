@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Login_System
 {
-    public partial class frm_Login : Form
+    public partial class Form1 : Form
     {
-        public frm_Login()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void frm_Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
