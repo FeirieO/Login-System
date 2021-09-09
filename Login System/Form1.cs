@@ -35,6 +35,10 @@ namespace Login_System
                 cmd.ExecuteNonQuery();
                 con.Close();
 
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                txtComPassword.Text = "";
+
                 MessageBox.Show("Your Account has Successfully Been Created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -44,6 +48,26 @@ namespace Login_System
                 txtComPassword.Text = "";
                 txtPassword.Focus();
             }
+        }
+
+        private void checkbxShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbxShowPass.Checked)
+            {
+                txtPassword.PasswordChar = '0';
+                txtComPassword.PasswordChar = '0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+                txtComPassword.PasswordChar = '*';
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            new frm_Login().Show();
+            this.Hide();
         }
     }
 }

@@ -52,6 +52,7 @@ namespace Login_System
             this.label6.Size = new System.Drawing.Size(97, 17);
             this.label6.TabIndex = 26;
             this.label6.Text = "Back to LOGIN";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -88,6 +89,7 @@ namespace Login_System
             this.checkbxShowPass.TabIndex = 24;
             this.checkbxShowPass.Text = "Show Passsword";
             this.checkbxShowPass.UseVisualStyleBackColor = true;
+            this.checkbxShowPass.CheckedChanged += new System.EventHandler(this.checkbxShowPass_CheckedChanged);
             // 
             // txtComPassword
             // 
@@ -97,6 +99,7 @@ namespace Login_System
             this.txtComPassword.Location = new System.Drawing.Point(74, 338);
             this.txtComPassword.Multiline = true;
             this.txtComPassword.Name = "txtComPassword";
+            this.txtComPassword.PasswordChar = '*';
             this.txtComPassword.Size = new System.Drawing.Size(228, 32);
             this.txtComPassword.TabIndex = 21;
             // 
@@ -117,6 +120,7 @@ namespace Login_System
             this.txtPassword.Location = new System.Drawing.Point(74, 244);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(228, 32);
             this.txtPassword.TabIndex = 22;
             // 
