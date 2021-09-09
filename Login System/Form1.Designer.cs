@@ -1,7 +1,7 @@
 ﻿
 namespace Login_System
 {
-    partial class Form1
+    partial class Frm_Register
     {
         /// <summary>
         /// Required designer variable.
@@ -159,7 +159,7 @@ namespace Login_System
             this.label1.TabIndex = 17;
             this.label1.Text = "Welcome Noob";
             // 
-            // Form1
+            // Frm_Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,8 +178,8 @@ namespace Login_System
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Frm_Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);

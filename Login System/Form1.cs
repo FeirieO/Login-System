@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Login_System
 {
-    public partial class Form1 : Form
+    public partial class Frm_Register : Form
     {
-        public Form1()
+        public Frm_Register()
         {
             InitializeComponent();
+
+            OleDbConnection Con = new OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0; Data Source = db_User.mdb"); 
+            OleDbCommand cmd = new OleDbCommand();
+            OleDbDataAdapter adap = new OleDbDataAdapter();
         }
     }
 }
