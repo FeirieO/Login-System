@@ -23,19 +23,19 @@ namespace Login_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
+            if (txtEmail.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
             {
                 MessageBox.Show("Username and Password Fiels are empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txtPassword.Text == txtComPassword.Text)
             {
                 con.Open();
-                String Register = "INSERT INTO tbl_User Values {" + txtUsername.Text + " , " + txtPassword.Text + ")";
+                String Register = "INSERT INTO tbl_User Values {" + txtEmail.Text + " , " + txtPassword.Text + ")";
                 cmd = new OleDbCommand(Register, con);
                 OleDbDataReader dbDataReader = cmd.ExecuteReader();
                 con.Close();
 
-                txtUsername.Text = "";
+                txtEmail.Text = "";
                 txtPassword.Text = "";
                 txtComPassword.Text = "";
 
@@ -74,6 +74,36 @@ namespace Login_System
         {
             new frm_Login().Show();
             this.Show();
+        }
+
+        private void Frm_Register_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmail_Enter(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "  Email")
+            {
+                txtEmail.Clear();
+                txtEmail.ForeColor = Color.FromArgb(83, 179, 233);
+
+            }
+
+        }
+
+        private void txtmail_Leave(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                txtEmail.ForeColor = Color.FromArgb(200, 200, 200);
+                txtEmail.Text = "   Email";
+            }
         }
     }
 }

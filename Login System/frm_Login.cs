@@ -35,7 +35,7 @@ namespace Login_System
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
-            String Login = "SELECT * FROM tbl_User where username = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
+            String Login = "SELECT * FROM tbl_User where username = '" + txtEmail.Text + "' and password = '" + txtPassword.Text + "'";
             cmd = new OleDbCommand(Login, con);
             OleDbDataReader dbDataReader = cmd.ExecuteReader();
 
@@ -47,9 +47,9 @@ namespace Login_System
             else
             {
                 MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUsername.Text = "";
+                txtEmail.Text = "";
                 txtPassword.Text = "";
-                txtUsername.Focus();
+                txtEmail.Focus();
             }
         }
 
@@ -63,6 +63,11 @@ namespace Login_System
             {
                 txtPassword.PasswordChar = '*';
             }
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
