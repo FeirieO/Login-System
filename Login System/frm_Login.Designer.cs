@@ -68,7 +68,7 @@ namespace Login_System
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(74, 387);
+            this.button1.Location = new System.Drawing.Point(74, 393);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(228, 39);
             this.button1.TabIndex = 14;
@@ -118,7 +118,6 @@ namespace Login_System
             this.txtEmail.Location = new System.Drawing.Point(74, 201);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '*';
             this.txtEmail.Size = new System.Drawing.Size(228, 32);
             this.txtEmail.TabIndex = 12;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
