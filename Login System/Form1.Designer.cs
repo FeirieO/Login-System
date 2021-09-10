@@ -102,6 +102,7 @@ namespace Login_System
             this.txtComPassword.PasswordChar = '*';
             this.txtComPassword.Size = new System.Drawing.Size(228, 32);
             this.txtComPassword.TabIndex = 21;
+            this.txtComPassword.TextChanged += new System.EventHandler(this.txtComPassword_TextChanged);
             // 
             // label4
             // 
@@ -123,6 +124,7 @@ namespace Login_System
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(228, 32);
             this.txtPassword.TabIndex = 22;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label3
             // 
