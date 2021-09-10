@@ -32,7 +32,7 @@ namespace Login_System
                 con.Open();
                 String Register = "INSERT INTO tbl_User Values {" + txtUsername.Text + " , " + txtPassword.Text + ")";
                 cmd = new OleDbCommand(Register, con);
-                cmd.ExecuteNonQuery();
+                OleDbDataReader dbDataReader = cmd.ExecuteReader();
                 con.Close();
 
                 txtUsername.Text = "";
@@ -68,6 +68,12 @@ namespace Login_System
         {
             new frm_Login().Show();
             this.Hide();
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+            new frm_Login().Show();
+            this.Show();
         }
     }
 }
