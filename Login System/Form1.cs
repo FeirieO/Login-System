@@ -24,6 +24,7 @@ namespace Login_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            #region
             string to, from, pass, messageBody;
             MailMessage message = new MailMessage();
             to = txtEmail.Text;
@@ -41,6 +42,9 @@ namespace Login_System
             client.Port = 587;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.Credentials = new NetworkCredential(from, pass);
+            #endregion
+            //to add a new user
+
 
             try
             {
