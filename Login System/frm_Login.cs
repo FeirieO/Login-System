@@ -47,11 +47,11 @@ namespace Login_System
             //if the user exists or doesn't exist
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("YES");
+                MessageBox.Show("Login Successful");
             }
             else
             {
-                MessageBox.Show("NO");
+                MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
            
