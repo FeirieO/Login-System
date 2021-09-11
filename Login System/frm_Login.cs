@@ -7,9 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
-using System.Net;
-using System.Net.Mail;
 using MySql.Data.MySqlClient;
 
 namespace Login_System
@@ -20,9 +17,6 @@ namespace Login_System
         {
             InitializeComponent();
         }
-        OleDbConnection con = new OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0; Data Source = db_User.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter adap = new OleDbDataAdapter();
 
         private void frm_Login_Load(object sender, EventArgs e)
         {
