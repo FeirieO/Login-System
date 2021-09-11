@@ -36,23 +36,21 @@ namespace Login_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            String Login = "SELECT * FROM tbl_User where username = '" + txtEmail.Text + "' and password = '" + txtPassword.Text + "'";
-            cmd = new OleDbCommand(Login, con);
-            OleDbDataReader dbDataReader = cmd.ExecuteReader();
-
-            if (dbDataReader.Read() == true)
-            {
-                new DashBoard().Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEmail.Text = "";
-                txtPassword.Text = "";
-                txtEmail.Focus();
-            }
+            String Email = txtEmail.Text;
+            String Password = txtPassword.Text;
+           
+            //if (dbDataReader.Read() == true)
+            //{
+            //    new DashBoard().Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    txtEmail.Text = "";
+            //    txtPassword.Text = "";
+            //    txtEmail.Focus();
+            //}
         }
 
         private void checkbxShowPass_CheckedChanged(object sender, EventArgs e)

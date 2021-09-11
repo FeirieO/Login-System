@@ -17,7 +17,6 @@ namespace Login_System
     public partial class Frm_Register : Form
     {
 
-        MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=csharp_users_db");
         public Frm_Register()
         {
             InitializeComponent();
