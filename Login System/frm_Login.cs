@@ -59,17 +59,22 @@ namespace Login_System
         {
             if (checkbxShowPass.Checked)
             {
-                txtPassword.PasswordChar = '0';
+                txtPassword.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
             }
             else
             {
-                txtPassword.PasswordChar = '*';
+                txtPassword.UseSystemPasswordChar = PasswordPropertyTextAttribute.No.Password;
             }
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

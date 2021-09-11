@@ -148,8 +148,7 @@ namespace Login_System
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = true;
-            txtPassword.PasswordChar = '*';
+           
         }
         
     }
