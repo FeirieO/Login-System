@@ -31,7 +31,7 @@ namespace Login_System
             message.To.Add(to);
             message.From = new MailAddress(from);
             message.Body = "From : " + " Message : " + messageBody;
-            message.Subject = txtEmail.Text;
+            message.Subject = txtEmail.Text;     
             message.IsBodyHtml = true;
             SmtpClient client = new SmtpClient("smtp.gmail.com");
             client.EnableSsl = true;
