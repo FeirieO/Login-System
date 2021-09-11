@@ -30,7 +30,10 @@ namespace Login_System
         }
 
         //a function to return the connection
-        
-        public void 
+
+        public MySqlConnection getConnection()
+        {
+            return connection;
+        } 
     }
 }

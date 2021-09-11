@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Net;
 using System.Net.Mail;
+using MySql.Data.MySqlClient;
 
 namespace Login_System
 {
@@ -36,8 +37,29 @@ namespace Login_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Db_Context db = new Db_Context();
+
             String Email = txtEmail.Text;
             String Password = txtPassword.Text;
+
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `email` = @usn and `password` = @pass");
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = Email;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = Password;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            //if the user exists or doesn't exist
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("YES");
+            }
+            else
+            {
+                MessageBox.Show("NO");
+            }
+
            
             //if (dbDataReader.Read() == true)
             //{
