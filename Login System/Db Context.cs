@@ -9,7 +9,7 @@ namespace Login_System
 {
     public class Db_Context
     {
-        MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=csharp_users_db");
+        MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=csharp_users_db;ssl mode=None");
 
         // A function to open connection
         public void openConnection()
