@@ -56,44 +56,22 @@ namespace Login_System
             db.openConnection();
 
             //execute the query
-
+            if (command.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Account Created Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
             //close account connection
             db.closeConnection();
 
-            try
-            {
-                client.Send(message);
-                DialogResult code = MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                if (code == DialogResult.OK)
-                {
-                    txtEmail.Clear();
-                    txtPassword.Clear();
-                    new DashBoard().Show();
-                    this.Show();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
             //if (txtEmail.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
             //{
             //    MessageBox.Show("Username and Password Fiels are empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //}
-            //else if (txtPassword.Text == txtComPassword.Text)
-            //{
-            //    con.Open();
-            //    String Register = "INSERT INTO tbl_User Values {" + txtEmail.Text + " , " + txtPassword.Text + ")";
-            //    cmd = new OleDbCommand(Register, con);
-            //    OleDbDataReader dbDataReader = cmd.ExecuteReader();
-            //    con.Close();
-
-            //    txtEmail.Text = "";
-            //    txtPassword.Text = "";
-            //    txtComPassword.Text = "";
-
             //    MessageBox.Show("Your Account has Successfully Been Created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //}
             //else
