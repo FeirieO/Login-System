@@ -131,7 +131,15 @@ namespace Login_System
 
         private void txtComPassword_TextChanged(object sender, EventArgs e)
         {
-
+            if (checkbxShowPass.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
+            }
+            else
+            {
+                //Hides Textbox password
+                txtPassword.UseSystemPasswordChar = PasswordPropertyTextAttribute.No.Password;
+            }
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
