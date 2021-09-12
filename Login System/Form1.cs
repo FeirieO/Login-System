@@ -44,7 +44,14 @@ namespace Login_System
             client.Credentials = new NetworkCredential(from, pass);
             #endregion
             //to add a new user
+            Db_Context db = new Db_Context();
+            MySqlCommand command = new MySqlCommand("INSERT INTO `users`(`username`, `email`, `password`, `confirm password`) VALUES (@email, @usn, @pass, @conpass)", db.getConnection());
 
+            command.Parameters.Add("@email", MySqlDbType.Text).Value = txtEmail.Text;
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = txtUser.Text;
+            command.Parameters.Add("pass", MySqlDbType.VarChar).Value = txtPassword.Text;
+            command.Parameters.Add("conpass", MySqlDbType.VarChar).Value = txtComPassword.Text;
+            
 
             try
             {
