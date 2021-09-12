@@ -51,7 +51,14 @@ namespace Login_System
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = txtUser.Text;
             command.Parameters.Add("pass", MySqlDbType.VarChar).Value = txtPassword.Text;
             command.Parameters.Add("conpass", MySqlDbType.VarChar).Value = txtComPassword.Text;
-            
+
+            //open account connection
+            db.openConnection();
+
+            //execute the query
+
+            //close account connection
+            db.closeConnection();
 
             try
             {
