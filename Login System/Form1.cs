@@ -25,23 +25,23 @@ namespace Login_System
         private void button1_Click(object sender, EventArgs e)
         {
             #region
-            string to, from, pass, messageBody;
-            MailMessage message = new MailMessage();
-            to = txtEmail.Text;
-            from = "janeaustinasia@gmail.com";
-            pass = "feirie1999";
-            messageBody = txtEmail.Text;
-            message.To.Add(to);
-            message.From = new MailAddress(from);
-            message.Body = "From : " + " Message : " + messageBody;
-            message.Subject = txtEmail.Text;     
-            message.IsBodyHtml = true;
-            SmtpClient client = new SmtpClient("smtp.gmail.com");
-            client.EnableSsl = true;
-            client.UseDefaultCredentials = false;
-            client.Port = 587;
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.Credentials = new NetworkCredential(from, pass);
+            //string to, from, pass, messageBody;
+            //MailMessage message = new MailMessage();
+            //to = txtEmail.Text;
+            //from = "janeaustinasia@gmail.com";
+            //pass = "feirie1999";
+            //messageBody = txtEmail.Text;
+            //message.To.Add(to);
+            //message.From = new MailAddress(from);
+            //message.Body = "From : " + " Message : " + messageBody;
+            //message.Subject = txtEmail.Text;     
+            //message.IsBodyHtml = true;
+            //SmtpClient client = new SmtpClient("smtp.gmail.com");
+            //client.EnableSsl = true;
+            //client.UseDefaultCredentials = false;
+            //client.Port = 587;
+            //client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            //client.Credentials = new NetworkCredential(from, pass);
             #endregion
             //to add a new user
             Db_Context db = new Db_Context();
@@ -56,7 +56,7 @@ namespace Login_System
             db.openConnection();
 
             //execute the query
-            if (command.ExecuteNonQuery() == 1)
+            if (command.ExecuteNonQuery() == 0)
             {
                 MessageBox.Show("Account Created Successfully");
             }
