@@ -121,22 +121,12 @@ namespace Login_System
 
         private void txtmail_Enter(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "  Email")
-            {
-                txtEmail.Clear();
-                txtEmail.ForeColor = Color.FromArgb(83, 179, 233);
-
-            }
-
+         
         }
 
         private void txtmail_Leave(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "")
-            {
-                txtEmail.ForeColor = Color.FromArgb(200, 200, 200);
-                txtEmail.Text = "   Email";
-            }
+            
         }
 
         private void txtComPassword_TextChanged(object sender, EventArgs e)
