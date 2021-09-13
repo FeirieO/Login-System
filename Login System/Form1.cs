@@ -56,7 +56,7 @@ namespace Login_System
             db.openConnection();
 
             //execute the query
-            if (txtEmail.Text == "" &&txtUser.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
+            if (command.ExecuteNonQuery() == 1)
             {
                 MessageBox.Show("Account Created Successfully");
             }
