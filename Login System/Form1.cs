@@ -56,7 +56,7 @@ namespace Login_System
             db.openConnection();
 
             //execute the query
-            if (command.ExecuteNonQuery() == 1)
+            if (command.ExecuteNonQuery() == -1)
             {
                 MessageBox.Show("Account Created Successfully");
             }
