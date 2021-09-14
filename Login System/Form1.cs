@@ -57,7 +57,7 @@ namespace Login_System
 
             if (checkUsername())
             {
-                MessageBox.Show("This Account Already Exist");
+                MessageBox.Show("This Username Already Exists");
             }
             else
             {
@@ -94,12 +94,12 @@ namespace Login_System
         {
             Db_Context db = new Db_Context();
 
-            String Email = txtEmail.Text;
+            String Username = txtEmail.Text;
 
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `email` = @usn", db.getConnection());
-            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = Email;
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `username` = @usn", db.getConnection());
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = Username;
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
