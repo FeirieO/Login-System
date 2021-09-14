@@ -83,10 +83,6 @@ namespace Login_System
             //}
         }
 
-        public Boolean txtUsername()
-        {
-            Db_Context db = 
-        }
 
         private void checkbxShowPass_CheckedChanged(object sender, EventArgs e)
         {
