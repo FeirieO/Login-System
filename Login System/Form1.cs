@@ -55,15 +55,23 @@ namespace Login_System
             //open account connection
             db.openConnection();
 
-            //execute the query
-            if (command.ExecuteNonQuery() == 1)
+            if (checkUsername())
             {
-                MessageBox.Show("Account Created Successfully");
+                MessageBox.Show("This Account Already Exist");
             }
             else
             {
-                MessageBox.Show("Error");
+                //execute the query
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Account Created Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
             }
+
             //close account connection
             db.closeConnection();
 
@@ -81,6 +89,31 @@ namespace Login_System
             //    txtComPassword.Text = "";
             //    txtPassword.Focus();
             //}
+        }
+        public Boolean checkUsername()
+        {
+            Db_Context db = new Db_Context();
+
+            String Email = txtEmail.Text;
+
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `email` = @usn", db.getConnection());
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = Email;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            //if the user exists or doesn't exist
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Login Successful");
+            }
+            else
+            {
+                MessageBox.Show("Invalid Email or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return false;
         }
 
 
