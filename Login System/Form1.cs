@@ -106,14 +106,14 @@ namespace Login_System
             //if the user exists or doesn't exist
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("Login Successful");
+                return true;
             }
             else
             {
-                MessageBox.Show("Invalid Email or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
-            return false;
+            
         }
 
 
