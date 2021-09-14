@@ -33,13 +33,13 @@ namespace Login_System
         {
             Db_Context db = new Db_Context();
 
-            String Email = txtEmail.Text;
+            String Username = txtEmail.Text;
             String Password = txtPassword.Text;
 
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `email` = @usn and `password` = @pass", db.getConnection());
-            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = Email;
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE username` = @usn and `password` = @pass", db.getConnection());
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = Username;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = Password;
             adapter.SelectCommand = command;
             adapter.Fill(table);
