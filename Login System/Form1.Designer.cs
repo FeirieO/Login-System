@@ -156,9 +156,10 @@ namespace Login_System
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(71, 190);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 17);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Email";
+            this.label2.Text = "Username";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -176,9 +177,9 @@ namespace Login_System
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(71, 109);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 17);
+            this.label7.Size = new System.Drawing.Size(42, 17);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Username";
+            this.label7.Text = "Email";
             // 
             // txtUser
             // 

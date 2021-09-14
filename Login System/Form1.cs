@@ -75,20 +75,7 @@ namespace Login_System
             //close account connection
             db.closeConnection();
 
-           
-            //if (txtEmail.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
-            //{
-            //    MessageBox.Show("Username and Password Fiels are empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //    MessageBox.Show("Your Account has Successfully Been Created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Password does not match, Please Re-enter", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    txtPassword.Text = "";
-            //    txtComPassword.Text = "";
-            //    txtPassword.Focus();
-            //}
+          
         }
         public Boolean checkUsername()
         {
@@ -114,6 +101,12 @@ namespace Login_System
             }
 
             
+        }
+        public Boolean checkTextBoxesValues()
+        {
+            String email = txtEmail.Text;
+            String username = txtUser.Text;
+            return false;
         }
 
 
@@ -180,6 +173,10 @@ namespace Login_System
         {
            
         }
-        
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
