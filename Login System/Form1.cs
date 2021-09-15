@@ -55,21 +55,28 @@ namespace Login_System
             //open account connection
             db.openConnection();
 
-            if (checkUsername())
+            if (!checkTextBoxesValues())
             {
-                MessageBox.Show("This Username Already Exists");
-            }
-            else
-            {
-                //execute the query
-                if (command.ExecuteNonQuery() == 1)
+                if (checkUsername())
                 {
-                    MessageBox.Show("Account Created Successfully");
+                    MessageBox.Show("This Username Already Exists");
                 }
                 else
                 {
-                    MessageBox.Show("Error");
+                    //execute the query
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Account Created Successfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error");
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please enter your Information");
             }
 
             //close account connection
@@ -106,6 +113,13 @@ namespace Login_System
         {
             String email = txtEmail.Text;
             String username = txtUser.Text;
+            String Password = txtPassword.Text;
+            String ComPassword = txtComPassword.Text;
+
+            if (email.Equals("email") || username.Equals("username") || Password.Equals("password") || ComPassword.Equals("conPassword"))
+            {
+
+            }
             return false;
         }
 
