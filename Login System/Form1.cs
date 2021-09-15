@@ -59,24 +59,26 @@ namespace Login_System
             {
                 if (checkUsername())
                 {
-                    MessageBox.Show("This Username Already Exists");
+                    MessageBox.Show("Please enter your Information");
+                    
                 }
                 else
                 {
-                    //execute the query
-                    if (command.ExecuteNonQuery() == 1)
-                    {
-                        MessageBox.Show("Account Created Successfully");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error");
-                    }
+                    MessageBox.Show("This Username Already Exists");
                 }
             }
             else
             {
-                MessageBox.Show("Please enter your Information");
+                //execute the query
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Account Created Successfully");
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+                MessageBox.Show("This Username Already Exists");
             }
 
             //close account connection
@@ -118,9 +120,12 @@ namespace Login_System
 
             if (email.Equals("email") || username.Equals("username") || Password.Equals("password") || ComPassword.Equals("conPassword"))
             {
-
+                return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
 
 
