@@ -118,9 +118,12 @@ namespace Login_System
 
             if (email.Equals("email") || username.Equals("username") || Password.Equals("password") || ComPassword.Equals("conPassword"))
             {
-
+                return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
 
 
