@@ -97,7 +97,7 @@ namespace Login_System
         {
             Db_Context db = new Db_Context();
 
-            String Username = txtEmail.Text;
+            String Username = txtUser.Text;
 
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -158,8 +158,9 @@ namespace Login_System
 
         private void label6_Click_1(object sender, EventArgs e)
         {
-            new frm_Login().Show();
-            this.Show();
+            this.Hide();
+            frm_Login loginform = new frm_Login();
+            loginform.Show();
         }
 
         private void Frm_Register_Load(object sender, EventArgs e)
