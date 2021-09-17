@@ -74,7 +74,7 @@ namespace Login_System
                         }
                         else
                         {
-                            MessageBox.Show("Error");
+                            MessageBox.Show("ERROR");
                         }
                     }
                 }
