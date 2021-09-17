@@ -57,23 +57,35 @@ namespace Login_System
 
             if (!checkTextBoxesValues())
             {
-                if (checkUsername())
+                //check if the password equal the confirm password
+                if (txtPassword.Text.Equals(txtComPassword.Text))
                 {
-                    MessageBox.Show("Please enter your Information");
-                    
-                }
-                else if (command.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("Account Created Successfully");
+                    //check if the username already exists
+                    if (checkUsername())
+                    {
+                        MessageBox.Show("This Username Already Exists", "Duplicate Username", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        //execute the query
+                        if (command.ExecuteNonQuery() == 1)
+                        {
+                            MessageBox.Show("Account Created Successfully", "Your Account Has Been Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error");
+                        }
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error");
+                    MessageBox.Show("Wrong Confirmation Password", "Password Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("This Username Already Exists");
+                MessageBox.Show("Please enter your Information", "Empty Data", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
 
             //close account connection
