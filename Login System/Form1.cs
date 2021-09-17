@@ -62,12 +62,7 @@ namespace Login_System
                     MessageBox.Show("Please enter your Information");
                     
                 }
-                
-            }
-            else
-            {
-                //execute the query
-                if (command.ExecuteNonQuery() == 1)
+                else if (command.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Account Created Successfully");
                 }
@@ -75,6 +70,10 @@ namespace Login_System
                 {
                     MessageBox.Show("Error");
                 }
+            }
+            else
+            {
+                MessageBox.Show("This Username Already Exists");
             }
 
             //close account connection
