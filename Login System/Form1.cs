@@ -62,10 +62,7 @@ namespace Login_System
                     MessageBox.Show("Please enter your Information");
                     
                 }
-                else
-                {
-                    MessageBox.Show("This Username Already Exists");
-                }
+                
             }
             else
             {
@@ -78,7 +75,6 @@ namespace Login_System
                 {
                     MessageBox.Show("Error");
                 }
-                MessageBox.Show("This Username Already Exists");
             }
 
             //close account connection
