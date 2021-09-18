@@ -55,22 +55,23 @@ namespace Login_System
             //open account connection
             db.openConnection();
 
+            // check if the textboxes contains the default values 
             if (!checkTextBoxesValues())
             {
-                //check if the password equal the confirm password
+                // check if the password equal the confirm password
                 if (txtPassword.Text.Equals(txtComPassword.Text))
                 {
-                    //check if the username already exists
+                    // check if this username already exists
                     if (checkUsername())
                     {
-                        MessageBox.Show("This Username Already Exists", "Duplicate Username", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        MessageBox.Show("This Username Already Exists, Select A Different One", "Duplicate Username", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        //execute the query
+                        // execute the query
                         if (command.ExecuteNonQuery() == 1)
                         {
-                            MessageBox.Show("Account Created Successfully", "Your Account Has Been Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Your Account Has Been Created", "Account Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -82,10 +83,11 @@ namespace Login_System
                 {
                     MessageBox.Show("Wrong Confirmation Password", "Password Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 }
+
             }
             else
             {
-                MessageBox.Show("Please enter your Information", "Empty Data", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Enter Your Informations First", "Empty Data", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
 
             //close account connection
