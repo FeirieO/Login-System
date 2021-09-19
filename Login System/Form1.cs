@@ -146,14 +146,14 @@ namespace Login_System
 
         private void label6_Click(object sender, EventArgs e)
         {
-            new Frm_Register().Show();
+            new frm_Login().Show();
             this.Hide();
         }
 
         private void label6_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Frm_Register loginform = new Frm_Register();
+            frm_Login loginform = new frm_Login();
             loginform.Show();
         }
 

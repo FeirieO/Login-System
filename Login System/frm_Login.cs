@@ -27,7 +27,7 @@ namespace Login_System
         private string username;
         private void label6_Click(object sender, EventArgs e)
         {
-            new DashBoard().Show();
+            new Frm_Register().Show();
             this.Hide();
         }
 
