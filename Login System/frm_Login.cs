@@ -13,8 +13,9 @@ namespace Login_System
 {
     public partial class frm_Login : Form
     {
-        public frm_Login()
+        public frm_Login(string username)
         {
+            this.username = username;
             InitializeComponent();
         }
 
@@ -23,6 +24,7 @@ namespace Login_System
 
         }
 
+        private string username;
         private void label6_Click(object sender, EventArgs e)
         {
             new Frm_Register().Show();
