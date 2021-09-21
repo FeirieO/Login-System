@@ -26,6 +26,7 @@ namespace Login_System
             if (connection.State == System.Data.ConnectionState.Open)
             {
                 connection.Close();
+                openConnection();
             }
         }
 
