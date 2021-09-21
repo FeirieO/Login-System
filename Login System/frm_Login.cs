@@ -56,19 +56,6 @@ namespace Login_System
                 MessageBox.Show("Invalid Email or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-           
-            //if (dbDataReader.Read() == true)
-            //{
-            //    new DashBoard().Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    txtEmail.Text = "";
-            //    txtPassword.Text = "";
-            //    txtEmail.Focus();
-            //}
         }
 
         private void checkbxShowPass_CheckedChanged(object sender, EventArgs e)
